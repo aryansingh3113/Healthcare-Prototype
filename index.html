@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTYA Healthcare</title>
+    <link rel="stylesheet" href="rough.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">VTYA Healthcare</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#affordability">Affordability</a></li>
+                <li><a href="#rehabilitation">Rehabilitation</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#checkups">Health Checkups</a></li>
+                <li><a href="#health-management">Health Management</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to VTYA Healthcare</h1>
+        <p>Your Partner in Affordable and Enjoyable Healthcare Solutions</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+   
+    <section id="about">
+        <h2>About Us</h2>
+        <p>VTYA Healthcare is dedicated to providing affordable and enjoyable healthcare solutions, focusing on rural areas and rehabilitation processes.</p>
+    </section>
+    
+    <div class="map-head">
+        <h2>Nearest Hospitals</h2>
+       </div>
+        <div id="map"></div>    
+
+    <section id="affordability">
+        <h2>Affordability</h2>
+        <p>Addressing rising healthcare costs in rural areas through innovative solutions.</p>
+        <div class="solution">
+            <h3>Telemedicine and Mobile Health Clinics</h3>
+            <p>Bringing healthcare services to remote areas.</p>
+        </div>
+        <div class="solution">
+            <h3>Community Health Workers and Education</h3>
+            <p>Empowering local residents to provide basic healthcare services.</p>
+        </div>
+        <div class="solution">
+            <h3>Subsidies and Sliding Scale Payment Systems</h3>
+            <p>Making healthcare affordable for everyone.</p>
+        </div>
+        <div class="solution">
+            <h3>Partnerships with Non-Profits and NGOs</h3>
+            <p>Collaborating to provide comprehensive healthcare solutions.</p>
+        </div>
+    </section>
+
+    <section id="rehabilitation">
+        <h2>Rehabilitation</h2>
+        <p>Incorporating enjoyable activities into the recovery process.</p>
+        <div class="solution">
+            <h3>Creative Therapies</h3>
+            <p>Art and music therapy programs for expression and joy.</p>
+        </div>
+        <div class="solution">
+            <h3>Physical Activities</h3>
+            <p>Exercise and sports programs tailored for recovery.</p>
+        </div>
+        <div class="solution">
+            <h3>Social and Community Engagement</h3>
+            <p>Group activities and workshops for social interaction.</p>
+        </div>
+        <div class="solution">
+            <h3>Technology Integration</h3>
+            <p>Using VR and gamification to make recovery engaging.</p>
+        </div>
+        <h3>Blogs on Drug Addiction</h3>
+        <div class="blog">
+            <h4>Understanding Drug Addiction in Youth</h4>
+            <p>Exploring the causes and effects of drug addiction among young people.</p>
+        </div>
+        <div class="blog">
+            <h4>How to Overcome Drug Addiction</h4>
+            <p>Steps and strategies to leave drug addiction behind and lead a healthy life.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Home Checkup Booking</h3>
+            <p>Book a health checkup from the comfort of your home.</p>
+            <button onclick="scrollToSection('contact')">Book Now</button>
+        </div>
+        <div class="service">
+            <h3>Online Consultation</h3>
+            <p>Consult with our doctors online from anywhere.</p>
+            <button onclick="scrollToSection('contact')">Consult Now</button>
+        </div>
+        <div class="service">
+            <h3>Online OPD/Appointment Booking</h3>
+            <p>Book appointments with hospitals and dispensaries online.</p>
+            <button onclick="scrollToSection('contact')">Book Appointment</button>
+        </div>
+    </section>
+
+    <section id="checkups">
+        <h2>Health Checkups</h2>
+        <p>Information about basic to advanced health checkups provided by each hospital.</p>
+        <div class="hospital">
+            <h3>Government Hospital A</h3>
+            <p>Basic to advanced checkups including blood tests, X-rays, and more.</p>
+        </div>
+        <div class="hospital">
+            <h3>Government Dispensary B</h3>
+            <p>Basic health checkups and routine screenings.</p>
+        </div>
+        <!-- Add more hospitals/dispensaries as needed -->
+    </section>
+
+    <section id="health-management">
+        <h2>Personal Health Management</h2>
+        <div class="health-info">
+            <h3>Medical Checkups Awareness</h3>
+            <p>Get reminders and recommendations based on your previous medical checkups.</p>
+        </div>
+        <div class="health-info">
+            <h3>Health Status Overview</h3>
+            <p>Track and view your current health status and progress.</p>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <form>
+            <label for="feedback-name">Name:</label>
+            <input type="text" id="feedback-name" name="name">
+            <label for="feedback-email">Email:</label>
+            <input type="email" id="feedback-email" name="email">
+            <label for="feedback-message">Feedback:</label>
+            <textarea id="feedback-message" name="message"></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Address: 123 Health St, Rural Town, Country</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: contact@vtyahealthcare.com</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 VTYA Healthcare. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>

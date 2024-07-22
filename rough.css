@@ -1,0 +1,216 @@
+/* Base Colors */
+:root {
+    --primary-color: #0044cc; /* Deep Blue */
+    --secondary-color: #ff6f61; /* Coral */
+    --background-color: #f4f4f4; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --border-color: #ddd; /* Light Gray Border */
+    --button-hover-color: #003bb3; /* Darker Blue */
+    --link-hover-color: #003bb3; /* Darker Blue */
+    --section-bg-light: #ffffff; /* White for sections */
+    --section-bg-dark: #e0e0e0; /* Light Gray for sections */
+    --highlight-color: #d1e7f0; /* Light Blue for highlights */
+    --alert-color: #f8d7da; /* Light Red for alerts */
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: wheat
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding: 10% 1rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 5rem; /* Increased font size for visibility */
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow for readability */
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    color: wheat;
+}
+
+button {
+    background: var(--secondary-color);
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover-color);
+}
+
+section {
+    padding: 3rem 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+section p {
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.solution, .service, .health-info, .hospital, .blog {
+    margin: 1.5rem 0;
+}
+
+.solution {
+    background: var(--highlight-color);
+}
+
+.service, .blog {
+    background: var(--section-bg-light);
+}
+
+.health-info {
+    background: var(--section-bg-dark);
+}
+
+.hospital {
+    background: var(--highlight-color);
+}
+
+h3, h4 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+form {
+    display: grid;
+    grid-gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
+.hero {
+    background: 
+        url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding: 10% 1rem;
+    position: relative;
+}
+.map-head h2{
+   color: #0044cc;
+   text-align: center;
+   font-size: 5vh;
+}
+#map{
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
