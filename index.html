@@ -6,6 +6,9 @@
     <title>VTYA Healthcare</title>
     <link rel="stylesheet" href="rough.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+
+    </style>
 </head>
 <body>
     <header>
@@ -39,7 +42,53 @@
     <div class="map-head">
         <h2>Nearest Hospitals</h2>
        </div>
-        <div id="map"></div>    
+       <div id="sidebar">
+        <h2>Nearby Hospitals</h2>
+        <ul id="hospital-list"></ul>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+
+            fetch(`https://overpass-api.de/api/interpreter?data=[out:json];node(around:5000,${e.latitude},${e.longitude})[amenity=hospital];out;`)
+                .then(response => response.json())
+                .then(data => {
+                    var hospitalList = document.getElementById('hospital-list');
+                    hospitalList.innerHTML = '';
+
+                    data.elements.forEach(element => {
+                        var hospitalItem = document.createElement('li');
+                        hospitalItem.textContent = element.tags.name || 'Unnamed Hospital';
+                        hospitalList.appendChild(hospitalItem);
+
+                        L.marker([element.lat, element.lon]).addTo(map)
+                            .bindPopup(element.tags.name || 'Hospital');
+                    });
+                });
+        }
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+        map.locate({setView: true, maxZoom: 16});
+    </script>    
 
     <section id="affordability">
         <h2>Affordability</h2>
@@ -168,9 +217,9 @@
         <p>Phone: (123) 456-7890</p>
         <p>Email: contact@vtyahealthcare.com</p>
         <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <a href="#" style="color: blue;">Facebook</a>
+            <a href="#" style="color: blue;">Twitter</a>
+            <a href="#" style="color: blue;">LinkedIn</a>
         </div>
     </section>
 
