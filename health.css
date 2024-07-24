@@ -58,15 +58,6 @@ header nav ul li a:hover {
     color: wheat
 }
 
-.hero {
-    background: url('photo3.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    text-align: center;
-    padding: 10% 1rem;
-    position: relative;
-}
-
 .hero h1 {
     font-size: 5rem; /* Increased font size for visibility */
     margin: 0;
@@ -247,4 +238,12 @@ body, html {
 }
 #hospital-list li:hover {
     background-color: #e9ecef;
+}
+.hero {
+    background: url("hero-image.jpg") no-repeat center center/cover; 
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding: 10% 1rem;
+    position: relative;
 }
