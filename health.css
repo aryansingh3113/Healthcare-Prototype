@@ -131,6 +131,11 @@ h3, h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
+h5 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
 
 form {
     display: grid;
@@ -188,7 +193,7 @@ footer a:hover {
 }
 .hero {
     background: 
-        url('photo2.jpg') no-repeat center center/cover;
+        url('tanph3.avif') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     text-align: center;
@@ -238,12 +243,4 @@ body, html {
 }
 #hospital-list li:hover {
     background-color: #e9ecef;
-}
-.hero {
-    background: url("hero-image.jpg") no-repeat center center/cover; 
-    color: #fff;
-    height: 100vh;
-    text-align: center;
-    padding: 10% 1rem;
-    position: relative;
 }

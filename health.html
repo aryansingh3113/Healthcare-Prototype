@@ -6,21 +6,28 @@
     <title>VTYA Healthcare</title>
     <link rel="stylesheet" href="health.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        .btn-translate, .btn-revert {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">VTYA Healthcare</div>
+        <div class="logo" data-i18n="logo">VTYA Healthcare</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#affordability">Affordability</a></li>
-                <li><a href="#rehabilitation">Rehabilitation</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#checkups">Health Checkups</a></li>
-                <li><a href="#health-management">Health Management</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#affordability" data-i18n="nav.affordability">Affordability</a></li>
+                <li><a href="#rehabilitation" data-i18n="nav.rehabilitation">Rehabilitation</a></li>
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#checkups" data-i18n="nav.checkups">Health Checkups</a></li>
+                <li><a href="#health-management" data-i18n="nav.healthManagement">Health Management</a></li>
+                <li><a href="#feedback" data-i18n="nav.feedback">Feedback</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -141,9 +148,9 @@
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <h2> Our Services</h2>
         <div class="service">
-            <h3>Home Checkup Booking</h3>
+            <h3 >Home Checkup Booking</h3>
             <p>Book a health checkup from the comfort of your home. Experience convenient and personalized healthcare with our home checkup service. Schedule a visit from a qualified healthcare professional right to your doorstep, ensuring you receive thorough and attentive care without leaving your home. Book your appointment today and enjoy the ease and comfort of receiving quality medical care at home.</p>
             <button onclick="document.location='healthCheckup.html'">Book Now</button>
         </div>
@@ -193,13 +200,31 @@
     <section id="health-management">
         <h2>Personal Health Management</h2>
         <p>Take control of your well-being with our comprehensive Personal Health Management resources.From tracking your medical history and scheduling checkups to receiving personalized health tips, we provide everything you need to manage your health effectively.</p>
+        <button onclick="document.location='assistantForm.html'">Fill this Form</button>
         <div class="health-info">
             <h3>Medical Checkups Awareness</h3>
             <p>Get reminders and recommendations based on your previous medical checkups. Regular medical checkups are vital for early detection and prevention of health issues. Our awareness campaign highlights the importance of routine health screenings and assessments.  Explore our resources to learn more about the benefits of regular checkups.</p>
-        </div>
-        <div class="health-info">
-            <h3>Health Status Overview</h3>
-            <p>Track and view your current health status and progress. Understanding your health status is key to maintaining overall well-being. Our Health Status Overview provides you with a comprehensive snapshot of your current health, including vital signs, medical history, and risk factors. Stay informed and take proactive steps to enhance your health with our detailed health status reports.</p>
+            <p>For more information visit the <a href="https://pmjay.gov.in/" style="color: #0044cc;">https://pmjay.gov.in/</a>. Here you will get all the government health related schmes</p>
+            <h3 style="text-decoration: underline;">Some government heath related schemes are as follows:</h3>
+            <h5>Ayushman Bharat</h5>
+            <p>Pradhan Mantri Jan Arogya Yojana (PMJAY): This scheme aims to provide health coverage to economically vulnerable families. It covers free medical checkups, treatments, and hospitalizations up to ₹5 lakh per family per year.</p>
+
+            <h5>Rashtriya Bal Swasthya Karyakram (RBSK)</h5>
+            <p> This scheme focuses on the health screening and early intervention services for children from birth to 18 years. It aims to cover defects at birth, deficiencies, diseases, and developmental delays, including disability.</p>
+
+            <h5>Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)</h5>
+            <p> This program offers free antenatal checkups to pregnant women on the 9th of every month. It aims to detect and manage high-risk pregnancies to reduce maternal and neonatal mortality rates.</p>
+
+            <h5>Mission Indradhanush</h5>
+            <p> Launched to ensure that children under two years of age and pregnant women are immunized against seven vaccine-preventable diseases. Regular health checkups and immunization drives are conducted under this mission.</p>
+
+            <h5>National Programme for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases and Stroke (NPCDCS)</h5>
+            <p>This program focuses on screening and early detection of non-communicable diseases (NCDs). It includes regular checkups and awareness campaigns to educate the public about lifestyle diseases.</p>
+            <h5>National Tobacco Control Programme (NTCP)</h5>
+            <p>This program aims to reduce tobacco consumption through awareness campaigns and regular health checkups to detect early signs of tobacco-related diseases.</p>
+
+            <h5>School Health Program</h5>
+            <p>Part of the Ayushman Bharat initiative, this program promotes health awareness among school children. It includes regular health checkups, screenings, and health education sessions in schools</p>
         </div>
     </section>
 
